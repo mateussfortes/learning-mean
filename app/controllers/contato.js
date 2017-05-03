@@ -11,6 +11,7 @@ var contatos = [
 // app/controllers/contato.js
 module.exports = function() {
 	var controller = {};
+	
 	controller.listaContatos = function(req, res) {
 		res.json(contatos);
 	};

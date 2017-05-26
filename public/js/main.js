@@ -10,4 +10,4 @@ angular.module('contatooh', ['ngRoute', 'ngResource'])
 			controller: 'ContatoController'
 		});
 		$routeProvider.otherwise({redirectTo: '/contatos'});
-	});
+});

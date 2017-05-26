@@ -7,6 +7,8 @@ angular.module('contatooh').controller('ContatosController',
 
 		$scope.filtro = '';
 
+		$scope.mensagem = {texto: ''};
+
 		$scope.incrementa = function() {
 			$scope.total++;
 		};
@@ -19,8 +21,9 @@ angular.module('contatooh').controller('ContatosController',
 					$scope.contatos = contatos;
 				},
 				function(erro) {
-					console.log("Não foi possível obter a lista de contatos");
-					console.log(erro);
+					$scope.mensagem = {
+						'texto': 'Não foi possível obter a lista de contatos'
+					}
 				}
 			);
 		}
@@ -32,8 +35,9 @@ angular.module('contatooh').controller('ContatosController',
 				{id: contato._id},
 				buscaContatos,
 				function(erro) {
-					console.log('Não foi possível remover o contato');
-					console.log(erro);
+					$scope.mensagem = {
+						'texto': 'Não foi possível remover o contato'
+					}
 				}
 			);
 		};

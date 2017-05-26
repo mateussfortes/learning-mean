@@ -11,7 +11,7 @@ angular.module('contatooh').controller('ContatosController',
 			$scope.total++;
 		};
 
-		var Contato = $resource('/contatos');
+		var Contato = $resource('/contatos/:id');
 
 		function buscaContatos() {
 			Contato.query(
